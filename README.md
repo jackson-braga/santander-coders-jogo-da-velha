@@ -36,7 +36,7 @@ Este projeto tem o intuito de demonstrar nosso conhecimento adquirido no primeir
       <a href="https://github.com/CristianaMoura">
         <img src="https://avatars.githubusercontent.com/u/41807239?v=4" width="100px;" alt="Foto de CristianaMoura no GitHub"/><br>
         <sub>
-          <b>TBarr4</b>
+          <b>Cris Moura</b>
         </sub>
       </a>
     </td>
