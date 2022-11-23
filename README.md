@@ -42,7 +42,6 @@ Este projeto tem o intuito de demonstrar nosso conhecimento adquirido no primeir
     </td>
   </tr>
 </table>
-https://avatars.githubusercontent.com/u/41807239?v=4
 <div class="badge-base LI-profile-badge" data-locale="pt_BR" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="tomas-barra" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://br.linkedin.com/in/tomas-barra?trk=profile-badge">Tomás Barra</a></div>
 <div class="badge-base LI-profile-badge" data-locale="pt_BR" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="cristianamoura" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://br.linkedin.com/in/cristianamoura?trk=profile-badge">Cris Moura</a></div>
               
