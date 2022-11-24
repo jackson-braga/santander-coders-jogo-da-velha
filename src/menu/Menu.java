@@ -31,7 +31,7 @@ public class Menu {
                 break;
             case 2:
                 System.out.println("Iniciando novo jogo de melhor de três");
-                System.out.println("Esse modo de jogo consiste em 3 rodadas que defeniram um vencedor ou empate.\n");
+                System.out.println("Esse modo de jogo consiste em 3 rodadas que defenirão um vencedor ou empate.\n");
                 new Jogo().melhorDeTres();
                 break;
             case 3:
