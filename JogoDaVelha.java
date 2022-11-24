@@ -12,7 +12,7 @@ public class JogoDaVelha {
         preencherJogo(matriz);
 
         //Jogo
-        while (game == true) {
+        while (game) {
             // Primeiro jogador
             System.out.println("1° Jogador");
             System.out.println("Informe a linha");
@@ -20,24 +20,16 @@ public class JogoDaVelha {
             System.out.println("Informe a coluna");
             coluna = valorValido(scanner);
             verificarJogada(matriz, linha, coluna, simboloX);
-            game = verificarLinhas(matriz, simboloX);
-            if (game == false){
-                System.out.println("JOGADOR 1 VENCEU O JOGO");
-                break;
-            }
-            game = verificarColunas(matriz, simboloX);
-            if (game == false){
-                System.out.println("JOGADOR 1 VENCEU O JOGO");
-                break;
-            }
-            game = verificarDiagonais(matriz, simboloX);
-            if (game == false){
-                System.out.println("JOGADOR 1 VENCEU O JOGO");
+            game = verificandoSeOk(matriz, simboloX);
+            if (!game) {
+                desenhaJogo(matriz);
+                System.out.println("O JOGADOR 1 GANHOU!!");
                 break;
             }
 
             vezesJogadas++;
             if (vezesJogadas == 5) {
+                desenhaJogo(matriz);
                 System.out.println("Empate infelizmente ;(");
                 break;
             }
@@ -51,22 +43,15 @@ public class JogoDaVelha {
             System.out.println("Informe a coluna");
             coluna = valorValido(scanner);
             verificarJogada(matriz, linha, coluna, simboloO);
-            game = verificarLinhas(matriz, simboloO);
-            if (game == false){
-                System.out.println("JOGADOR 2 VENCEU O JOGO");
-                break;
-            }
-            game = verificarColunas(matriz, simboloO);
-            if (game == false){
-                System.out.println("JOGADOR 2 VENCEU O JOGO");
-                break;
-            }
-            game = verificarDiagonais(matriz, simboloO);
-            if (game == false){
-                System.out.println("JOGADOR 2 VENCEU O JOGO");
+
+            game = verificandoSeOk(matriz, simboloO);
+            if (!game) {
+                desenhaJogo(matriz);
+                System.out.println("O JOGADOR 2 GANHOU!!");
                 break;
             }
             desenhaJogo(matriz);
+
         }
     }
 
@@ -77,13 +62,6 @@ public class JogoDaVelha {
             }
         }
     }
-
-//    public static void limparTela() {
-//        for (int cont = 0; cont < 20; cont++) {
-//            System.out.println("");
-//        }
-//    }
-
     public static void desenhaJogo(String matriz[][]) {
         //    limparTela();
         for (int i = 0; i < matriz.length; i++) {
@@ -124,32 +102,39 @@ public class JogoDaVelha {
     }
 
     public static boolean verificarLinhas(String matriz[][], String simbolo) {
-        if ((matriz[0][0].equals(simbolo) && matriz[0][1].equals(simbolo) && matriz[0][2].equals(simbolo)) ||
-                (matriz[1][0].equals(simbolo) && matriz[1][1].equals(simbolo) && matriz[1][2].equals(simbolo)) ||
-                (matriz[2][0].equals(simbolo) && matriz[2][1].equals(simbolo) && matriz[2][2].equals(simbolo))){
-            return false;
-        } else {
-            return true;
+        for (int i = 0; i < matriz.length; i++) {
+            if (matriz[i][0].equals(simbolo) && matriz[i][1].equals(simbolo) && matriz[i][2].equals(simbolo)) {
+                return false;
+            }
         }
+        return true;
     }
 
     public static boolean verificarColunas(String matriz[][], String simbolo) {
-        if ((matriz[0][0].equals(simbolo) && matriz[1][0].equals(simbolo) && matriz[2][0].equals(simbolo)) ||
-                (matriz[0][1].equals(simbolo) && matriz[1][1].equals(simbolo) && matriz[2][1].equals(simbolo)) ||
-                (matriz[0][2].equals(simbolo) && matriz[1][2].equals(simbolo) && matriz[2][2].equals(simbolo))){
-            return false;
-        } else {
-            return true;
+        for (int i = 0; i < matriz.length; i++) {
+            if (matriz[0][i].equals(simbolo) && matriz[1][i].equals(simbolo) && matriz[2][i].equals(simbolo)) {
+                return false;
+            }
         }
+        return true;
     }
 
     public static boolean verificarDiagonais(String matriz[][], String simbolo) {
         if ((matriz[0][0].equals(simbolo) && matriz[1][1].equals(simbolo) && matriz[2][2].equals(simbolo)) ||
-                (matriz[0][2].equals(simbolo) && matriz[1][1].equals(simbolo) && matriz[2][0].equals(simbolo))){
+                (matriz[0][2].equals(simbolo) && matriz[1][1].equals(simbolo) && matriz[2][0].equals(simbolo))) {
             return false;
         } else {
             return true;
         }
+    }
+
+    public static boolean verificandoSeOk(String matriz[][], String simbolo) {
+        if (!verificarLinhas(matriz, simbolo) || !verificarColunas(matriz, simbolo) || !verificarDiagonais(matriz, simbolo)) {
+            return false;
+        } else {
+            return true;
+        }
+
     }
 
 }
