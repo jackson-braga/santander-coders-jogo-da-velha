@@ -1,198 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0ba4b9e2-98d4-4112-b16f-2e3249fd0232" name="Changes" comment="Criando a opção de quantidade de rodadas e adapatando o código para aceitar essas informações.">
+    <list default="true" id="78698682-d76a-4c07-b16b-131b24e0919e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/metodos/Jogada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metodos/Jogada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/metodos/Mensagens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metodos/Mensagens.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JogoDaVelha.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/Grupo8-Davi-e-Marcos" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="quantidadeRodadas" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubProjectSettings">
-    <option name="branchProtectionPatterns">
-      <list>
-        <option value="master" />
-      </list>
-    </option>
-  </component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="recentNewPullRequestHead">
-      <RepoCoordinatesHolder>
-        <option name="owner" value="usmarcos" />
-        <option name="repository" value="JogoDaVelha" />
-      </RepoCoordinatesHolder>
-    </option>
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/metodos/Jogada.java" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2HuK5izG13vaHXOR7gjAG1UViIc" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2I0QbZgBT9pb7pYQEUfTaTPe9FY" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "settings.editor.selected.configurable": "copyright"
+    "last_opened_file_path": "D:/Projetos Pessoais/santander-coders-jogo-da-velha",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "Errors",
+    "settings.editor.splitter.proportion": "0.19719407"
   }
 }]]></component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="JogoDaVelha" />
+      <module name="santander-coders-jogo-da-velha" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0ba4b9e2-98d4-4112-b16f-2e3249fd0232" name="Changes" comment="" />
-      <created>1669129348704</created>
+      <changelist id="78698682-d76a-4c07-b16b-131b24e0919e" name="Changes" comment="" />
+      <created>1669316093782</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1669129348704</updated>
+      <updated>1669316093782</updated>
     </task>
-    <task id="LOCAL-00001" summary="Iniciando projeto e montando a parte inicial">
-      <created>1669151465750</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1669151465750</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Iniciando projeto e montando a parte inicial">
-      <created>1669151571968</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1669151571968</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Finalizando jogo base.">
-      <created>1669157554443</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1669157554443</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Finalizando jogo base. Correção bug.">
-      <created>1669157772809</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1669157772809</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Finalizando jogo base. Correção bug.">
-      <created>1669158041759</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1669158041759</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Finalizando jogo base. Correção bug.">
-      <created>1669159312581</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1669159312581</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Finalizando jogo base. Correção bug.">
-      <created>1669170117547</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1669170117547</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Criando a validação de quando há velha e invertendo método de verificação.">
-      <created>1669171487045</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1669171487045</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Criando o reset para o próximo game e resolvendo o último bug da velha.">
-      <created>1669175150919</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1669175150919</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Tentando criar melhor de 3">
-      <created>1669208299896</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1669208299896</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Finalizando a criação da melhor de três e ajustes nas validações.">
-      <created>1669216233427</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1669216233427</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Corrigindo as classes.">
-      <created>1669221063048</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1669221063048</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Corrigindo as classes.">
-      <created>1669222208916</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1669222208916</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Criando a opção de quantidade de rodadas e adapatando o código para aceitar essas informações.">
-      <created>1669252492722</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1669252492722</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Criando a opção de quantidade de rodadas e adapatando o código para aceitar essas informações.">
-      <created>1669252524126</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1669252524126</updated>
-    </task>
-    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,16 +89,8 @@
       </map>
     </option>
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Iniciando projeto e montando a parte inicial" />
-    <MESSAGE value="Finalizando jogo base." />
-    <MESSAGE value="Finalizando jogo base. Correção bug." />
-    <MESSAGE value="Criando a validação de quando há velha e invertendo método de verificação." />
-    <MESSAGE value="Criando o reset para o próximo game e resolvendo o último bug da velha." />
-    <MESSAGE value="Tentando criar melhor de 3" />
-    <MESSAGE value="Finalizando a criação da melhor de três e ajustes nas validações." />
-    <MESSAGE value="Corrigindo as classes." />
-    <MESSAGE value="Criando a opção de quantidade de rodadas e adapatando o código para aceitar essas informações." />
-    <option name="LAST_COMMIT_MESSAGE" value="Criando a opção de quantidade de rodadas e adapatando o código para aceitar essas informações." />
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
