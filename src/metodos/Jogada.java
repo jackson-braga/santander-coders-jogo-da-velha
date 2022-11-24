@@ -170,8 +170,8 @@ public class Jogada extends Mensagens {
                 else if (historicoGanhador[i].equals("VELHA")) velha++;
             }
         } catch (NullPointerException e) {
-            //quando for nulo vai apenas seguir pois não interfere no funcionamento.
-            //apenas quando ele mapeia um nullo não gerar exceção por conta do método equals.
+            /*quando for nulo vai apenas seguir pois não interfere no funcionamento.
+            apenas quando ele mapeia um nullo não gerar exceção por conta do método equals.*/
         }
         System.out.println(SEPARADOR);
         System.out.printf(PONTOS_JOGADOR_UM, jogadorUm);
@@ -201,6 +201,8 @@ public class Jogada extends Mensagens {
                 else if (historicoGanhador[i].equals("Jogador 2") && historicoGanhador[i] != null) jogadorDois++;
             }
         } catch (NullPointerException e) {
+            /*quando for nulo vai apenas seguir pois não interfere no funcionamento.
+              apenas quando ele mapeia um nullo não gerar exceção por conta do método equals.*/
         }
         if (jogadorUm == 2) fim = true;
         else if (jogadorDois == 2) fim = true;
