@@ -1,6 +1,6 @@
-Jogo da Velha – Checklist 
+**Jogo da Velha – Checklist** 
 
-Escopo Reduzido
+**Escopo Reduzido**
 
 Feito:
 - Imprimir o tabuleiro ao iniciar
@@ -9,15 +9,15 @@ Feito:
 
 Fazer ou Revisar:
 - Se todos os espaços forem preenchidos, imprimir “A rodada ficou empatada”
-	Gabriel: Ainda não pensei nisso... Da maneira como está se o jogador preenche o tabuleiro o jogo volta pedir uma nova jogada, mas também não aceita nenhuma nova jogada porque no tratamento de erro ele impede uma marcação num campo já preenchido
+> Gabriel: Ainda não pensei nisso... Da maneira como está se o jogador preenche o tabuleiro o jogo volta pedir uma nova jogada, mas também não aceita nenhuma nova jogada porque no tratamento de erro ele impede uma marcação num campo já preenchido
 
 Tratamento de erros:
 - Campo inexistente (IndexOutOfBounds)
 - Campo já preenchido
 
-	Gabriel: Fiz uma função chamada verificaJogada. Nela há um try e catch verificando se o jogador digitou algum valor fora da matriz. Dentro do try com um if-else se o campo já foi preenchido
+> Gabriel: Fiz uma função chamada verificaJogada. Nela há um try e catch verificando se o jogador digitou algum valor fora da matriz. Dentro do try com um if-else se o campo já foi preenchido
 
-Final
+**Final**
 
 Feito:
 - Ver Escopo Reduzido
@@ -26,7 +26,7 @@ Feito:
 Fazer ou Revisar:
 - Partida de desempate
 
-	PDF: “Se no final de todas as partidas o número de partidas ganha de cada jogador for igual, a aplicação deve iniciar uma nova partida para finalizar o jogo”.
-Tratamento de erros:
+> PDF: *“Se no final de todas as partidas o número de partidas ganha de cada jogador for igual, a aplicação deve iniciar uma nova partida para finalizar o jogo”.*
 
-	Gabriel: Não verifiquei se o número de partidas é maior ou igual a 1
+Tratamento de erros:
+> Gabriel: Não verifiquei se o número de partidas é maior ou igual a 1
