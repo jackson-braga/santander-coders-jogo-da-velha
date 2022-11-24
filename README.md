@@ -13,6 +13,7 @@ Fazer ou Revisar:
 - Tratamento de erros:
 - Campo inexistente (IndexOutOfBounds)
 - Campo já preenchido
+
 	Gabriel: Fiz uma função chamada verificaJogada. Nela há um try e catch verificando se o jogador digitou algum valor fora da matriz. Dentro do try com um if-else se o campo já foi preenchido
 
 Final
@@ -22,6 +23,8 @@ Feito:
 
 Fazer ou Revisar:
 - Partida de desempate
+
 	PDF: “Se no final de todas as partidas o número de partidas ganha de cada jogador for igual, a aplicação deve iniciar uma nova partida para finalizar o jogo”.
 - Tratamento de erros:
+
 	Gabriel: Não verifiquei se o número de partidas é maior ou igual a 1
