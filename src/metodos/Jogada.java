@@ -126,7 +126,7 @@ public class Jogada extends Mensagens {
     }
 
     protected void reset() {
-        //reset matriz com valores
+//        //reset matriz com valores
         for (int linha = 0; linha < 3; linha++) {
             for (int coluna = 0; coluna < 3; coluna++) {
                 posicao[linha][coluna] = ' ';
