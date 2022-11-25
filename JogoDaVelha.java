@@ -142,7 +142,7 @@ public class JogoDaVelha {
 
             }
             if(linha < (velha.length-1))
-                System.out.println("\n  ----------- ");
+               System.out.println("\n  ---+---+--- ");
         }
         System.out.println();
     }
