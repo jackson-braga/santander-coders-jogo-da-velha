@@ -9,10 +9,25 @@ Este projeto tem o intuito de demonstrar nosso conhecimento adquirido no primeir
 
 ## :wrench: Tecnologia utilizada
 * Java;
+* A IDE de sua preferencia;
 
 ## :rocket: Rodando o projeto
 ```
+Para jogar, basta escolher uma IDE de sua preferencia e clonar o jogo por lá.
 
+Dentro do jogo o funcionamento é simples, ao rodas o código o jogo irá te pedir o campo que você quer preencher como player, sendo o player 1 ou 2, por exemplo:
+"PLAYER1, Escolha uma linha e coluna :" Nesta caso você pode escolher entre 3 linhas e 3 colunas. 
+Digitando por exemplo: 2 para linha, apertando enter e 3 para coluna você terá o seguinte resultado:
+
+|---|---|---|
+|   |   |   |
+|---|---|---|
+|   |   | X |
+|---|---|---|
+|   |   |   |
+|---|---|---|
+
+As regras para o jogo em si, são as regras padrão para o jogo da velha.
 ```
 
 ## :handshake: Realizado por
