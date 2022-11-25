@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class JogoDaVelha {
-
     static int pontuacaoJogadorO = 0;
     static int pontuacaoJogadorX = 0;
     static int partidasJogadas = 1;
@@ -98,23 +97,23 @@ public class JogoDaVelha {
         int linha = scanner.nextInt() - 1;
 
         if (linha < 0 || linha > 2) {
-            System.out.println("Posição inválida!");
-            throw new RuntimeException("Posição inválida!");
+            System.out.println("Posição inválida. Tente novamente!");
+            throw new RuntimeException("Posição inválida. Tente novamente!");
         }
 
         System.out.println("Informe a coluna (1-3):");
         int coluna = scanner.nextInt() - 1;
 
         if (coluna < 0 || coluna > 2) {
-            System.out.println("Posição inválida!");
-            throw new RuntimeException("Posição inválida!");
+            System.out.println("Posição inválida. Tente novamente!");
+            throw new RuntimeException("Posição inválida. Tente novamente!");
         }
 
         char posicao = tabuleiro[linha][coluna];
 
         if (posicao != '*') {
-            System.out.println("Posição já preenchida!");
-            throw new RuntimeException("Posição já preenchida!");
+            System.out.println("Posição já preenchida. Tente novamente!");
+            throw new RuntimeException("Posição já preenchida. Tente novamente!");
         }
 
         tabuleiro[linha][coluna] = jogador;
