@@ -10,7 +10,6 @@ public class JogoDaVelha {
     static String[][] tabuleiro = {{" "," "," "},{" "," "," "},{" "," "," "}};
     static int qtdRodadas = 0;
     static boolean existeGanhador;
-
     static String player = "player1";
 
     public static void main(String[] args) throws JogaInvalidaException {
@@ -45,6 +44,8 @@ public class JogoDaVelha {
 
         }while (qtdRodadas <= 9 && !existeGanhador);
     }
+
+
     private static boolean verificaGanhador(String player) {
 
         if(player.equalsIgnoreCase("player1")){
@@ -62,6 +63,7 @@ public class JogoDaVelha {
         return false;
     }
 
+
     private static boolean isGanhadorColunas(String figura) {
         //Colunas
         if ((tabuleiro[0][0] == figura && tabuleiro[1][0] == figura && tabuleiro[2][0] == figura) ||
@@ -72,6 +74,7 @@ public class JogoDaVelha {
 
         return false;
     }
+
 
     private static boolean isGanhadorLinhas(String figura) {
         //Linhas
@@ -84,6 +87,7 @@ public class JogoDaVelha {
         return false;
     }
 
+
     private static boolean isGanhadorDiagonal(String figura) {
         //Diagonais
         if(tabuleiro[0][0] == figura && tabuleiro[1][1] == figura && tabuleiro[2][2] == figura){
@@ -94,6 +98,7 @@ public class JogoDaVelha {
 
         return false;
     }
+
 
     private static void imprimeTabuleiro() {
         System.out.println("|---|---|---|");
@@ -106,6 +111,7 @@ public class JogoDaVelha {
             System.out.println("|---|---|---|");
         }
     }
+
 
     private static boolean jogada(int linha, int coluna, String player) throws JogaInvalidaException {
         for (int i = 0; i < tabuleiro.length; i++){
