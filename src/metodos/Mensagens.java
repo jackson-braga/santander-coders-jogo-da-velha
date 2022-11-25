@@ -15,7 +15,7 @@ public class Mensagens {
     final String POSICAO_PREENCHIDA = "Esta posição já está preenchida, informe uma nova jogada. \n";
     final String SEM_VENCEDORES = "\nVELHA, não há vencedores. Inicie uma nova partida.";
     final String VENCEDOR_X = "\nO jogador 1 venceu (X)";
-    final String VENCEDOR_O = "\nO jogador 1 venceu (O)";
+    final String VENCEDOR_O = "\nO jogador 2 venceu (O)";
     final String PONTOS_JOGADOR_UM = "O jogador 1 fez %d ponto(s).";
     final String PONTOS_JOGADOR_DOIS = "\nO jogador 2 fez %d ponto(s).";
     final String VELHA = "\nHouveram %d empate(s) (velha).";

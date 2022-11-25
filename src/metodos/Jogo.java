@@ -30,7 +30,6 @@ public class Jogo extends Jogada {
             System.out.println(VENCEDOR_O);
         }
         reset();
-        new Menu().menu();
     }
 
     public void melhorDeTres() {

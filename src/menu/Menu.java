@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 public class Menu {
     public void menu() {
+        int quantPartidasDesejadas;
         int opcao;
         boolean continuar;
         System.out.println("\nIniciar jogo");
@@ -23,15 +24,26 @@ public class Menu {
                 System.out.println("Opção inválida. Escolha uma das opções.");
                 continuar = true;
             }
+            do {
+                System.out.println("Quantas partidas o jogo terá? ");
+                quantPartidasDesejadas = new Scanner(System.in).nextInt();
+                if (quantPartidasDesejadas <= 0) {
+                    System.out.println("Quantidade incorreta. Insira um valor maior que 0");
+                }
+            } while(quantPartidasDesejadas <= 0);
+
         } while (continuar);
         switch (opcao) {
             case 1:
-                System.out.println("Iniciando novo jogo.");
-                new Jogo().jogo();
+                for (int i = 1; i <= quantPartidasDesejadas; i++) {
+                    System.out.println("Iniciando novo jogo.");
+                    new Jogo().jogo();
+                }
+                new Menu().menu();
                 break;
             case 2:
                 System.out.println("Iniciando novo jogo de melhor de três");
-                System.out.println("Esse modo de jogo consiste em 3 rodadas que defenirão um vencedor ou empate.\n");
+                System.out.println("Esse modo de jogo consiste em 3 rodadas que defeniram um vencedor ou empate.\n");
                 new Jogo().melhorDeTres();
                 break;
             case 3:
