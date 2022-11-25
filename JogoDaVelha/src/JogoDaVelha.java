@@ -182,9 +182,8 @@ public class JogoDaVelha {
             imprimir(tabuleiro);
             System.out.println();
             System.out.println("-------------------------------");
-            System.out.println("          Deu velha!           ");
+            System.out.println("Deu velha! Partida reiniciada! ");
             System.out.println("-------------------------------");
-            partidasJogadas++;
             reiniciarTabuleiro(tabuleiro);
             return true;
         }
