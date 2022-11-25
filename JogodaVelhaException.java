@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class JogodaVelhaException {
-    public static void main(String[] args) throws MenuInvalidoException {
+    public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         int linha = 0, coluna = 0, cont = 0;
         boolean game = true;
@@ -14,17 +14,17 @@ public class JogodaVelhaException {
         //Jogo
         while (game) {
             // Primeiro jogador
-            System.out.println("1° Jogador");
-            System.out.println("Informe a linha");
-            linha = valorValido(scanner);
-            System.out.println("Informe a coluna");
 
             try {
+                System.out.println("1° Jogador");
+                System.out.println("Informe a linha");
+                linha = valorValido(scanner);
+                System.out.println("Informe a coluna");
                 coluna = valorValido(scanner);
             } catch (RuntimeException e){
                 System.out.println(e.getMessage());
-
             }
+
 
             verificarJogada(matriz, linha, coluna, simboloX);
 
@@ -45,13 +45,17 @@ public class JogodaVelhaException {
             desenhaJogo(matriz);
 
             // Segundo jogador
-            System.out.println("2° Jogador");
-            System.out.println("Informe a linha");
-            linha = valorValido(scanner);
-            System.out.println("Informe a coluna");
-            coluna = valorValido(scanner);
-            verificarJogada(matriz, linha, coluna, simboloO);
+            try {
+                System.out.println("2° Jogador");
+                System.out.println("Informe a linha");
+                linha = valorValido(scanner);
+                System.out.println("Informe a coluna");
+                coluna = valorValido(scanner);
+            } catch (RuntimeException e){
+                System.out.println(e.getMessage());
+            }
 
+            verificarJogada(matriz, linha, coluna, simboloO);
             game = verificandoSeOk(matriz, simboloO);
             if (!game) {
                 desenhaJogo(matriz);
