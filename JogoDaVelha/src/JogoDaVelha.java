@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class JogoDaVelha {
+
     static int pontuacaoJogadorO = 0;
     static int pontuacaoJogadorX = 0;
     static int partidasJogadas = 1;
