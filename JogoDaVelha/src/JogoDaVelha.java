@@ -192,7 +192,7 @@ public class JogoDaVelha {
 
     }
 
-    private static void placar(char[][] tabuleiro,char campeao){
+    private static void placar(char[][] tabuleiro,char campeao) {
 
         System.out.println();
         imprimir(tabuleiro);
