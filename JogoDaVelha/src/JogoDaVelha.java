@@ -121,7 +121,7 @@ public class JogoDaVelha {
 
     }
 
-    private static boolean validaFinalDoJogo(char[][] tabuleiro) {
+    public static boolean validaFinalDoJogo(char[][] tabuleiro) {
 
         // Linhas
 
@@ -192,7 +192,7 @@ public class JogoDaVelha {
 
     }
 
-    private static void marcaPlacar(char[][] tabuleiro, char campeao) {
+    public static void marcaPlacar(char[][] tabuleiro, char campeao) {
 
         System.out.println();
         imprimeTabuleiro(tabuleiro);
