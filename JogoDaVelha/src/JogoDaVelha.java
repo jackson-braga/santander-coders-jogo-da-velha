@@ -24,7 +24,7 @@ public class JogoDaVelha {
             while (true) {
 
                 System.out.println();
-                imprimir(tabuleiro);
+                imprimeTabuleiro(tabuleiro);
                 System.out.println();
 
                 char jogadorDaVezXOuO = defineJogadorDaVez(jogadorDaVez);
@@ -64,7 +64,7 @@ public class JogoDaVelha {
 
     }
 
-    public static void imprimir(char[][] tabuleiro) {
+    public static void imprimeTabuleiro(char[][] tabuleiro) {
 
         for (int i = 0; i < tabuleiro.length; i++) {
             for (int j = 0; j < tabuleiro[i].length; j++) {
@@ -126,18 +126,18 @@ public class JogoDaVelha {
         // Linhas
 
         if (tabuleiro[0][0] == tabuleiro[0][1] && tabuleiro[0][0] == tabuleiro[0][2] && tabuleiro[0][0] != '*') {
-            placar(tabuleiro, tabuleiro[0][0]);
-            reiniciarTabuleiro(tabuleiro);
+            marcaPlacar(tabuleiro, tabuleiro[0][0]);
+            reiniciaTabuleiro(tabuleiro);
             return true;
         }
         if (tabuleiro[1][0] == tabuleiro[1][1] && tabuleiro[1][0] == tabuleiro[1][2] && tabuleiro[1][0] != '*') {
-            placar(tabuleiro, tabuleiro[1][0]);
-            reiniciarTabuleiro(tabuleiro);
+            marcaPlacar(tabuleiro, tabuleiro[1][0]);
+            reiniciaTabuleiro(tabuleiro);
             return true;
         }
         if (tabuleiro[2][0] == tabuleiro[2][1] && tabuleiro[2][0] == tabuleiro[2][2] && tabuleiro[2][0] != '*') {
-            placar(tabuleiro, tabuleiro[2][0]);
-            reiniciarTabuleiro(tabuleiro);
+            marcaPlacar(tabuleiro, tabuleiro[2][0]);
+            reiniciaTabuleiro(tabuleiro);
             return true;
 
         }
@@ -145,31 +145,31 @@ public class JogoDaVelha {
         // Colunas
 
         if (tabuleiro[0][0] == tabuleiro[1][0] && tabuleiro[0][0] == tabuleiro[2][0] && tabuleiro[0][0] != '*') {
-            placar(tabuleiro, tabuleiro[0][0]);
-            reiniciarTabuleiro(tabuleiro);
+            marcaPlacar(tabuleiro, tabuleiro[0][0]);
+            reiniciaTabuleiro(tabuleiro);
             return true;
         }
         if (tabuleiro[0][1] ==  tabuleiro[1][1] && tabuleiro[0][1] == tabuleiro[2][1] && tabuleiro[0][1] != '*') {
-            placar(tabuleiro, tabuleiro[0][1]);
-            reiniciarTabuleiro(tabuleiro);
+            marcaPlacar(tabuleiro, tabuleiro[0][1]);
+            reiniciaTabuleiro(tabuleiro);
             return true;
         }
         if (tabuleiro[0][2] == tabuleiro[1][2] && tabuleiro[0][2] == tabuleiro[2][2] && tabuleiro[0][2] != '*') {
-            placar(tabuleiro, tabuleiro[0][2]);
-            reiniciarTabuleiro(tabuleiro);
+            marcaPlacar(tabuleiro, tabuleiro[0][2]);
+            reiniciaTabuleiro(tabuleiro);
             return true;
         }
 
         // Diagonais
 
         if (tabuleiro[0][0] == tabuleiro[1][1] && tabuleiro[0][0] == tabuleiro[2][2] && tabuleiro[0][0] != '*') {
-            placar(tabuleiro, tabuleiro[0][0]);
-            reiniciarTabuleiro(tabuleiro);
+            marcaPlacar(tabuleiro, tabuleiro[0][0]);
+            reiniciaTabuleiro(tabuleiro);
             return true;
         }
         if (tabuleiro[0][2] == tabuleiro[1][1] && tabuleiro[0][2] == tabuleiro[2][0] && tabuleiro[0][2] != '*') {
-            placar(tabuleiro, tabuleiro[0][2]);
-            reiniciarTabuleiro(tabuleiro);
+            marcaPlacar(tabuleiro, tabuleiro[0][2]);
+            reiniciaTabuleiro(tabuleiro);
             return true;
         }
 
@@ -179,12 +179,12 @@ public class JogoDaVelha {
                 && tabuleiro[1][0] != '*' && tabuleiro[1][1] != '*' && tabuleiro[1][2] != '*'
                 && tabuleiro[2][0] != '*' && tabuleiro[2][1] != '*' && tabuleiro[2][2] != '*') {
             System.out.println();
-            imprimir(tabuleiro);
+            imprimeTabuleiro(tabuleiro);
             System.out.println();
             System.out.println("-------------------------------");
             System.out.println("Deu velha! Partida reiniciada! ");
             System.out.println("-------------------------------");
-            reiniciarTabuleiro(tabuleiro);
+            reiniciaTabuleiro(tabuleiro);
             return true;
         }
 
@@ -192,10 +192,10 @@ public class JogoDaVelha {
 
     }
 
-    private static void placar(char[][] tabuleiro,char campeao) {
+    private static void marcaPlacar(char[][] tabuleiro, char campeao) {
 
         System.out.println();
-        imprimir(tabuleiro);
+        imprimeTabuleiro(tabuleiro);
         System.out.println();
         System.out.println("-------------------------------");
         System.out.println("O campeão dessa partida foi " + campeao + "!");
@@ -210,7 +210,7 @@ public class JogoDaVelha {
 
     }
 
-    public static void reiniciarTabuleiro(char[][] tabuleiro) {
+    public static void reiniciaTabuleiro(char[][] tabuleiro) {
         tabuleiro[0][0] = '*';
         tabuleiro[0][1] = '*';
         tabuleiro[0][2] = '*';
