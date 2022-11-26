@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78698682-d76a-4c07-b16b-131b24e0919e" name="Changes" comment="Ajustando">
+    <list default="true" id="78698682-d76a-4c07-b16b-131b24e0919e" name="Changes" comment="Ajustando²">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/metodos/Jogada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metodos/Jogada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metodos/Jogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metodos/Jogo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/texto/Tabuleiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/texto/Tabuleiro.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +49,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/Projetos Pessoais/santander-coders-jogo-da-velha&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
@@ -81,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669320203761</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Ajustando²">
+      <created>1669407813413</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669407813413</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -97,7 +106,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Ajustando" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajustando" />
+    <MESSAGE value="Ajustando²" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajustando²" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.InputMismatchException" package="java.util" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

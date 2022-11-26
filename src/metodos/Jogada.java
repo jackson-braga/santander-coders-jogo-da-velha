@@ -1,10 +1,9 @@
 package metodos;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Jogada extends Mensagens {
     private char[][] posicao = new char[3][3];
-    //para não utilizar um array dinâmico usando "add" preferi setar um valor,
-    //pois não foi passado durante as aulas
     private String[] historicoGanhador = new String[100];
     int linha, coluna, velha;
     boolean continuar, fimJogo = false, continuaJogo = true;
@@ -14,11 +13,16 @@ public class Jogada extends Mensagens {
         System.out.println(SEPARADOR);
         System.out.println(JOGADA_JOGADOR_UM);
         do {
-            continuar = false;
-            System.out.print(POSICAO_LINHA);
-            linha = new Scanner(System.in).nextInt();
-            System.out.print(POSICAO_COLUNA);
-            coluna = new Scanner(System.in).nextInt();
+            try {
+                continuar = false;
+                System.out.print(POSICAO_LINHA);
+                linha = new Scanner(System.in).nextInt();
+                System.out.print(POSICAO_COLUNA);
+                coluna = new Scanner(System.in).nextInt();
+            } catch (InputMismatchException i) {
+                System.out.println(MENSAGEM_ERRO);
+                continuar = true;
+            }
             /*
             if ((linha < 0 || linha >= 3) || (coluna < 0 || coluna >= 3)) {
                 System.out.println(MENSAGEM_ERRO);
@@ -44,11 +48,16 @@ public class Jogada extends Mensagens {
         System.out.println(SEPARADOR);
         System.out.println(JOGADA_JOGADOR_DOIS);
         do {
-            continuar = false;
-            System.out.print(POSICAO_LINHA);
-            linha = new Scanner(System.in).nextInt();
-            System.out.print(POSICAO_COLUNA);
-            coluna = new Scanner(System.in).nextInt();
+            try {
+                continuar = false;
+                System.out.print(POSICAO_LINHA);
+                linha = new Scanner(System.in).nextInt();
+                System.out.print(POSICAO_COLUNA);
+                coluna = new Scanner(System.in).nextInt();
+            } catch (InputMismatchException i) {
+                System.out.println(MENSAGEM_ERRO);
+                continuar = true;
+            }
             /*if ((linha < 0 || linha >= 3) || (coluna < 0 || coluna >= 3)) {
                 System.out.println(MENSAGEM_ERRO);
                 continuar = true;
@@ -126,7 +135,7 @@ public class Jogada extends Mensagens {
     }
 
     protected void reset() {
-//        //reset matriz com valores
+        //reset matriz com valores
         for (int linha = 0; linha < 3; linha++) {
             for (int coluna = 0; coluna < 3; coluna++) {
                 posicao[linha][coluna] = ' ';

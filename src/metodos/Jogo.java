@@ -5,6 +5,7 @@ import menu.Menu;
 import java.util.Scanner;
 
 public class Jogo extends Jogada {
+    Menu menu = new Menu();
     public void jogo() {
         System.out.println(MARCACAO);
         do {
@@ -85,7 +86,7 @@ public class Jogo extends Jogada {
         imprimePlacar();
         getPlacar(melhorDeTres);
         reset();
-        new Menu().menu();
+        menu.menu();
     }
 
     public void quantidadePartidas() {
@@ -146,6 +147,6 @@ public class Jogo extends Jogada {
         //passando o número de rodadas iniciada pelo usuário
         getPlacar(rodada);
         reset();
-        new Menu().menu();
+        menu.menu();
     }
 }
