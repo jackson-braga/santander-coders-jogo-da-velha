@@ -1,4 +1,4 @@
-public class JogoDaVelha {
+public class JogoDaVelha2 {
     // Constants
     private static final int TAMANHO_LINHA = 3;
     private static final int TAMANHO_COLUNA = 3;
@@ -6,6 +6,9 @@ public class JogoDaVelha {
     private static final int ULTIMA_COLUNA = TAMANHO_COLUNA - 1;
     public static final String LINHA_INVALIDA = "A linha selecionada é inválida";
     public static final String COLUNA_INVALIDA = "A coluna selecionada é inválida";
+    public static final String SEPARADOR_LINHA = "---+---+---";
+    public static final String SEPARADOR_COLUNA = "|";
+    public static final String CAMPO = " %s ";
 
     private String[][] tabuleiro = new String[TAMANHO_LINHA][TAMANHO_COLUNA];
 
@@ -14,7 +17,7 @@ public class JogoDaVelha {
     private boolean finalizado = false;
     private boolean empatado = false;
 
-    public JogoDaVelha() {
+    public JogoDaVelha2() {
         jogador = EJogador.JOGADOR_1;
     }
 
@@ -76,6 +79,12 @@ public class JogoDaVelha {
     }
 
     private boolean verificarColunas() {
+        String[][] tabuleiroTemp = getTabulerioInvertido();
+
+        return verificarLinhasTabuleiro(tabuleiroTemp);
+    }
+
+    private String[][] getTabulerioInvertido() {
         String[][] tabuleiroTemp = new String[TAMANHO_COLUNA][TAMANHO_LINHA];
 
         for (int i = 0; i < tabuleiro.length; i++) {
@@ -83,13 +92,11 @@ public class JogoDaVelha {
                 tabuleiroTemp[j][i] = tabuleiro[i][j];
             }
         }
-
-        return verificarLinhasTabuleiro(tabuleiroTemp);
+        return tabuleiroTemp;
     }
 
     private boolean verificarLinhasTabuleiro(String[][] tabuleiro) {
-        for (int i = 0; i < tabuleiro.length; i++) {
-            String[] linha = tabuleiro[i];
+        for (String[] linha : tabuleiro) {
             if (verificarLinha(linha)) {
                 return true;
             }
@@ -106,12 +113,17 @@ public class JogoDaVelha {
             if (i == 0) {
                 continue;
             }
-            String colunaAnterior = linha[i - 1];
-            if (!coluna.equals(colunaAnterior)) {
+            if (!compararColunasIguais(linha, i)) {
                 return false;
             }
         }
         return true;
+    }
+
+    private static boolean compararColunasIguais(String[] linha, int i) {
+        String colunaAnterior = linha[i - 1];
+        String coluna = linha[i];
+        return coluna.equals(colunaAnterior);
     }
 
     private boolean verificarDiagonais() {
@@ -127,7 +139,9 @@ public class JogoDaVelha {
                 if (i == 0 && j == 0) {
                     continue;
                 }
-                if (!tabuleiro[i][j].equals(tabuleiro[i - 1][j - 1])) {
+                String campoAnterior = tabuleiro[i - 1][j - 1];
+                String campo = tabuleiro[i][j];
+                if (!campo.equals(campoAnterior)) {
                     return false;
                 }
             }
@@ -151,9 +165,9 @@ public class JogoDaVelha {
     }
 
     private boolean verificarTabuleiroPreenchido() {
-        for (int i = 0; i < tabuleiro.length; i++) {
-            for (int j = 0; j < tabuleiro[i].length; j++) {
-                if (tabuleiro[i][j] == null) {
+        for (String[] linha : tabuleiro) {
+            for (String coluna : linha) {
+                if (coluna == null) {
                     return false;
                 }
             }
@@ -181,12 +195,23 @@ public class JogoDaVelha {
         String tabuleiroImpresso = "";
         for (int idxLinha = 0; idxLinha < tabuleiro.length; idxLinha++) {
             String linha = getLinha(tabuleiro[idxLinha]);
-            tabuleiroImpresso += linha + "\n";
+            tabuleiroImpresso = concatenarLinha(tabuleiroImpresso, linha);
             if (idxLinha < tabuleiro.length - 1) {
-                tabuleiroImpresso += "---+---+---\n";
+                tabuleiroImpresso = concatenarLinha(tabuleiroImpresso, SEPARADOR_LINHA);
             }
         }
         return tabuleiroImpresso;
+    }
+
+    private String concatenarLinha(String texto, String linha) {
+        texto = concatenarTexto(texto, linha);
+        texto = concatenarTexto(texto, "\n");
+        return texto;
+    }
+
+    private static String concatenarTexto(String texto, String concatenar) {
+        texto += concatenar;
+        return texto;
     }
 
     private String getLinha(String[] linhaTabuleiro) {
@@ -194,10 +219,10 @@ public class JogoDaVelha {
         for (int idxCol = 0; idxCol < linhaTabuleiro.length; idxCol++) {
             String valor = linhaTabuleiro[idxCol] != null ? linhaTabuleiro[idxCol] : " ";
 
-            linha += " " + valor + " ";
+            linha = concatenarTexto(linha, String.format(CAMPO, valor));
 
             if (idxCol < linhaTabuleiro.length - 1) {
-                linha += "|";
+                linha = concatenarTexto(linha, SEPARADOR_COLUNA);
             }
         }
         return linha;
