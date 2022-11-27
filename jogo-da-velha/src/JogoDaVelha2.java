@@ -144,8 +144,13 @@ public class JogoDaVelha2 {
     
     private static int getPartidas(Scanner entrada) {
     	System.out.println(PARTIDAS);
-        int numero = entrada.nextInt();
-    	return numero > 0 ? numero : getPartidas(new Scanner(System.in));
+        try {
+        	int numero = entrada.nextInt();
+        	return numero > 0 ? numero : getPartidas(new Scanner(System.in));
+        } catch(Exception e) {
+        	System.out.println(INVALIDO);
+        	return getPartidas(new Scanner(System.in));
+        }
     }
 
     private static String getSimbol(int[][] pontos, int x, int y) {
