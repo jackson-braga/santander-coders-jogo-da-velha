@@ -1,4 +1,4 @@
-package jogodavelha;
+//package jogodavelha;
 
 public class JogadaInvalidaException extends Exception{
 

@@ -1,4 +1,4 @@
-package jogodavelha;
+//package jogodavelha;
 
 import java.util.Objects;
 import java.util.Scanner;
