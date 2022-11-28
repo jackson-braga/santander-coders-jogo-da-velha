@@ -3,7 +3,7 @@ package src;
 import java.util.Scanner;
 
 /**
- * @author CrisMoura on 24/11/2022
+ * @author CrisMoura e TomasBarra 24/11/2022
  */
 public class JogoDaVelha {
 
