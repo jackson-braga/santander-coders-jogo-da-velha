@@ -12,7 +12,7 @@ public class JogoDaVelha {
     static boolean existeGanhador;
     static String player = "player1";
 
-    public static void main(String[] args) throws JogaInvalidaException {
+    public static void main(String[] args) {
 
         do {
             System.out.println("##### RODADA - " + qtdRodadas + " #####");
@@ -42,7 +42,8 @@ public class JogoDaVelha {
             }
 
 
-        }while (qtdRodadas <= 9 && !existeGanhador);
+        }while (qtdRodadas < 9 && !existeGanhador);
+        System.out.println("Empatou!");
     }
 
 
