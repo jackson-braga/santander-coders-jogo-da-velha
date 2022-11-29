@@ -1,5 +1,7 @@
 package projeto;
 
+import java.util.InputMismatchException;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 /* Jogo da Velha
@@ -15,7 +17,7 @@ no final de todas as partidas o número de partidas ganha de cada jogador for ig
 deve iniciar uma nova partida para finalizar o jogo somente quando um dos jogadores ganhar a
 partida que desempatar o placar. // aplicação tem que repetir até ter um ganhador
 Regras básicas do Jogo da Velha
-O tabuleiro é uma matriz de três linhas por três colunas. OK
+O tabuleiro é uma matriz de três linhas por três colunas. OK2
 ● Antes de iniciar o jogo, a aplicação solicita quantas partidas vai ter.
 ● O jogador 1 terá a marcação X e o jogador 2 terá a marcação O. OK
 ● Os jogadores jogam alternadamente, uma marcação por vez, em um espaço do
@@ -36,14 +38,6 @@ As ações inválidas que o jogador (1 ou 2) cometer, deve ser tratado com o uso
 Por exemplo, quando um jogador escolher um campo do tabuleiro já preenchido ou um campo
 inexistente, a aplicação deve disparar uma exceção informando a movimentação errada
 solicitado que o movimento seja feito novamente.
-exceptions tratar qdo digita uma letra na jogada
-Exception in thread "main" java.util.InputMismatchException
-	at java.base/java.util.Scanner.throwFor(Scanner.java:939)
-	at java.base/java.util.Scanner.next(Scanner.java:1594)
-	at java.base/java.util.Scanner.nextInt(Scanner.java:2258)
-	at java.base/java.util.Scanner.nextInt(Scanner.java:2212)
-	at projeto.jogoDaVelha.main(jogoDaVelha.java:68)
-	No catch voltar para o menu
 * */
 public class jogoDaVelha {
 
@@ -51,15 +45,23 @@ public class jogoDaVelha {
 
 
         // Declaração das variáveis utilizadas
-        int numeroJogada = 0, contadorJogadas =0, qtPartidas = 0, linha, coluna, vitoriaJogador1 = 0, vitoriaJogador2 = 0;
+        int numeroJogada = 0, contadorJogadas = 0, qtPartidas = 0, linha, coluna, vitoriaJogador1 = 0, vitoriaJogador2 = 0;
         char primeiro = 'X', segundo = 'O';
 
         // Escolher a quantidade de partidas
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Escolha o número de partidas: ");
-        qtPartidas = scanner.nextInt();
 
-        // Laço de repetição do..while(qtPartidas>0) referente as quantidades de Partida
+        do {
+
+            System.out.println("Escolha o número de partidas: ");
+            qtPartidas = getNumero();
+
+            if (qtPartidas <= 0) {
+                System.out.println("Digite um número maior que Zero!");
+            }
+
+        } while (qtPartidas <= 0);
+
         do {
 
             // Criação um array de char 3x3
@@ -76,142 +78,142 @@ public class jogoDaVelha {
             while (contadorJogadas < 9) {
 
                 // verificação das jogadas com persnalização de jogador
-                if(contadorJogadas % 2 == 0) {
+                if (contadorJogadas % 2 == 0) {
                     System.out.println("Jogador 'X', escolha o número da sua jogada: ");
                 } else {
                     System.out.println("Jogador 'O', escolha o número da sua jogada: ");
                 }
                 // Laço de repetição para exibir o tabuleiro
-                    for (linha = 0; linha < 3; linha++) {
-                        for (coluna = 0; coluna < 3; coluna++) {
-                            System.out.print(tabuleiro[linha][coluna] + (coluna == 2 ? "\t" : " | "));
+                for (linha = 0; linha < 3; linha++) {
+                    for (coluna = 0; coluna < 3; coluna++) {
+                        System.out.print(tabuleiro[linha][coluna] + (coluna == 2 ? "\t" : " | "));
+                    }
+                    System.out.println();
+                }
+                // Entrada de dados do número da jogada
+                numeroJogada = getNumero();
+
+                // Switch Case para receber a opção escolhida e atribuir o X ou a O para o tabuleiro
+                switch (numeroJogada) {
+
+                    case 1:
+                        if (tabuleiro[0][0] == '1') {
+                            if (contadorJogadas % 2 == 0) {
+                                tabuleiro[0][0] = primeiro;
+                            } else {
+                                tabuleiro[0][0] = segundo;
+                            }
+                        } else {
+
+                            System.out.println("Jogada já realizada! Escolha outro número.");
+                            contadorJogadas--;
                         }
-                        System.out.println();
-                    }
-                    // Entrada de dados do número da jogada
-                    numeroJogada = scanner.nextInt();
+                        break;
+                    case 2:
+                        if (tabuleiro[0][1] == '2') {
+                            if (contadorJogadas % 2 == 0) {
+                                tabuleiro[0][1] = primeiro;
+                            } else {
+                                tabuleiro[0][1] = segundo;
+                            }
+                        } else {
 
-                    // Switch Case para receber a opção escolhida e atribuir o X ou a O para o tabuleiro
-                    switch (numeroJogada) {
-
-                        case 1:
-                            if (tabuleiro[0][0] == '1') {
-                                if (contadorJogadas % 2 == 0) {
-                                    tabuleiro[0][0] = primeiro;
-                                } else {
-                                    tabuleiro[0][0] = segundo;
-                                }
+                            System.out.println("Jogada já realizada! Escolha outro número.");
+                            contadorJogadas--;
+                        }
+                        break;
+                    case 3:
+                        if (tabuleiro[0][2] == '3') {
+                            if (contadorJogadas % 2 == 0) {
+                                tabuleiro[0][2] = primeiro;
                             } else {
-
-                                System.out.println("Jogada já realizada! Escolha outro número.");
-                                contadorJogadas--;
+                                tabuleiro[0][2] = segundo;
                             }
-                            break;
-                        case 2:
-                            if (tabuleiro[0][1] == '2') {
-                                if (contadorJogadas % 2 == 0) {
-                                    tabuleiro[0][1] = primeiro;
-                                } else {
-                                    tabuleiro[0][1] = segundo;
-                                }
+                        } else {
+                            System.out.println("Jogada já realizada! Escolha outro número.");
+                            contadorJogadas--;
+                        }
+                        break;
+                    case 4:
+                        if (tabuleiro[1][0] == '4') {
+                            if (contadorJogadas % 2 == 0) {
+                                tabuleiro[1][0] = primeiro;
                             } else {
-
-                                System.out.println("Jogada já realizada! Escolha outro número.");
-                                contadorJogadas--;
+                                tabuleiro[1][0] = segundo;
                             }
-                            break;
-                        case 3:
-                            if (tabuleiro[0][2] == '3') {
-                                if (contadorJogadas % 2 == 0) {
-                                    tabuleiro[0][2] = primeiro;
-                                } else {
-                                    tabuleiro[0][2] = segundo;
-                                }
+                        } else {
+                            System.out.println("Jogada já realizada! Escolha outro número.");
+                            contadorJogadas--;
+                        }
+                        break;
+                    case 5:
+                        if (tabuleiro[1][1] == '5') {
+                            if (contadorJogadas % 2 == 0) {
+                                tabuleiro[1][1] = primeiro;
                             } else {
-                                System.out.println("Jogada já realizada! Escolha outro número.");
-                                contadorJogadas--;
+                                tabuleiro[1][1] = segundo;
                             }
-                            break;
-                        case 4:
-                            if (tabuleiro[1][0] == '4') {
-                                if (contadorJogadas % 2 == 0) {
-                                    tabuleiro[1][0] = primeiro;
-                                } else {
-                                    tabuleiro[1][0] = segundo;
-                                }
+                        } else {
+                            System.out.println("Jogada já realizada! Escolha outro número.");
+                            contadorJogadas--;
+                        }
+                        break;
+                    case 6:
+                        if (tabuleiro[1][2] == '6') {
+                            if (contadorJogadas % 2 == 0) {
+                                tabuleiro[1][2] = primeiro;
                             } else {
-                                System.out.println("Jogada já realizada! Escolha outro número.");
-                                contadorJogadas--;
+                                tabuleiro[1][2] = segundo;
                             }
-                            break;
-                        case 5:
-                            if (tabuleiro[1][1] == '5') {
-                                if (contadorJogadas % 2 == 0) {
-                                    tabuleiro[1][1] = primeiro;
-                                } else {
-                                    tabuleiro[1][1] = segundo;
-                                }
+                        } else {
+                            System.out.println("Jogada já realizada! Escolha outro número.");
+                            contadorJogadas--;
+                        }
+                        break;
+                    case 7:
+                        if (tabuleiro[2][0] == '7') {
+                            if (contadorJogadas % 2 == 0) {
+                                tabuleiro[2][0] = primeiro;
                             } else {
-                                System.out.println("Jogada já realizada! Escolha outro número.");
-                                contadorJogadas--;
+                                tabuleiro[2][0] = segundo;
                             }
-                            break;
-                        case 6:
-                            if (tabuleiro[1][2] == '6') {
-                                if (contadorJogadas % 2 == 0) {
-                                    tabuleiro[1][2] = primeiro;
-                                } else {
-                                    tabuleiro[1][2] = segundo;
-                                }
+                        } else {
+                            System.out.println("Jogada já realizada! Escolha outro número.");
+                            contadorJogadas--;
+                        }
+                        break;
+                    case 8:
+                        if (tabuleiro[2][1] == '8') {
+                            if (contadorJogadas % 2 == 0) {
+                                tabuleiro[2][1] = primeiro;
                             } else {
-                                System.out.println("Jogada já realizada! Escolha outro número.");
-                                contadorJogadas--;
+                                tabuleiro[2][1] = segundo;
                             }
-                            break;
-                        case 7:
-                            if (tabuleiro[2][0] == '7') {
-                                if (contadorJogadas % 2 == 0) {
-                                    tabuleiro[2][0] = primeiro;
-                                } else {
-                                    tabuleiro[2][0] = segundo;
-                                }
+                        } else {
+                            System.out.println("Jogada já realizada! Escolha outro número.");
+                            contadorJogadas--;
+                        }
+                        break;
+                    case 9:
+                        if (tabuleiro[2][2] == '9') {
+                            if (contadorJogadas % 2 == 0) {
+                                tabuleiro[2][2] = primeiro;
                             } else {
-                                System.out.println("Jogada já realizada! Escolha outro número.");
-                                contadorJogadas--;
+                                tabuleiro[2][2] = segundo;
                             }
-                            break;
-                        case 8:
-                            if (tabuleiro[2][1] == '8') {
-                                if (contadorJogadas % 2 == 0) {
-                                    tabuleiro[2][1] = primeiro;
-                                } else {
-                                    tabuleiro[2][1] = segundo;
-                                }
-                            } else {
-                                System.out.println("Jogada já realizada! Escolha outro número.");
-                                contadorJogadas--;
-                            }
-                            break;
-                        case 9:
-                            if (tabuleiro[2][2] == '9') {
-                                if (contadorJogadas % 2 == 0) {
-                                    tabuleiro[2][2] = primeiro;
-                                } else {
-                                    tabuleiro[2][2] = segundo;
-                                }
-                            } else {
-                                System.out.println("Jogada já realizada! Escolha outro número.");
-                                contadorJogadas--;
-                            }
-                            break;
-                        default:
-                            System.out.println("Jogada Inválida! Digite um número de 1 à 9!");
-
-                    }
+                        } else {
+                            System.out.println("Jogada já realizada! Escolha outro número.");
+                            contadorJogadas--;
+                        }
+                        break;
+                    default:
+                        System.out.println("Jogada Inválida! Digite um número de 1 à 9!");
+                        contadorJogadas--;
+                }
 
                 contadorJogadas++;
 
-                    // Verificação de quem foi o ganhador
+                // Verificação de quem foi o ganhador
                 if (contadorJogadas >= 5) {
 
                     if (tabuleiro[0][0] == 'X' && tabuleiro[0][1] == 'X' && tabuleiro[0][2] == 'X') {
@@ -316,8 +318,21 @@ public class jogoDaVelha {
             // Reinicialização da Jogada (Preparando para nova partida)
             contadorJogadas = 0;
 
+
         } while (qtPartidas > 0);
 
+}
+
+    private static int getNumero() {
+        int valor;
+        try {
+            Scanner entrada = new Scanner(System.in);
+            valor = entrada.nextInt();
+            return valor;
+        } catch (InputMismatchException e) {
+            System.out.print("Erro! Digitou caractere inválido. Tente Novamente: ");
+            return getNumero();
+        }
     }
 }
 
